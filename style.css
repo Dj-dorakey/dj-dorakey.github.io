@@ -148,3 +148,48 @@ body {
 }
 
 
+/* Navbar setup */
+nav {
+  display: flex;
+  align-items: center;            /* vertical center */
+  justify-content: space-between;  /* logo left, menu right */
+  padding: 10px 30px;
+  background-color: #000;          /* navbar black */
+}
+
+/* Logo */
+nav .logo img {
+  height: 70px;   /* Logo size adjust */
+  width: auto;
+}
+
+/* Menu horizontal */
+nav .menu {
+  list-style: none;          /* remove bullets */
+  display: flex;             /* horizontal menu */
+  gap: 30px;                 /* space between items */
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu links */
+nav .menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Hover effect */
+nav .menu li a:hover {
+  color: #ff0000;  /* red on hover */
+}
+
+/* Optional: section height */
+section {
+  height: 400px;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  margin-bottom: 10px;
+}
