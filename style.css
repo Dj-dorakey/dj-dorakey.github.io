@@ -77,15 +77,10 @@ footer {
   width: auto;
   display: block;
 }.logo {
-  height: 200x;        /* logo clear & visible */
+  height: 200x;      
   width: auto;
   max-width: 260px;
   padding: 5px 10px;
 }
-header, nav {
-  display: flex;
-  align-items: center;
-}
 
-}
 
