@@ -1,100 +1,93 @@
-/* Basic Reset */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background: #111;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px 20px;
-}
-
+/* Logo */
 .logo img {
-    height: 50px;
+  height: 70px;
+  width: auto;
 }
 
-.menu a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: bold;
-    transition: 0.3s;
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
 
-.menu a:hover {
-    color: #ff0000;
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.hamburger {
+.menu li a:hover {
+  color: #ff0000;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Sections for demo */
+section {
+  height: 400px;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
     display: none;
     flex-direction: column;
-    cursor: pointer;
-}
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #fff;
-    margin-bottom: 5px;
-    border-radius: 2px;
-}
+  .menu li {
+    text-align: center;
+    padding: 15px 0;
+  }
 
-/* Mobile responsive */
-@media screen and (max-width: 768px) {
-    .menu {
-        position: absolute;
-        top: 70px;
-        left: -100%;
-        flex-direction: column;
-        background: #111;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
+  .menu-toggle {
+    display: flex;
+  }
 
-    .menu.active {
-        left: 0;
-    }
-
-    .menu a {
-        margin: 15px 0;
-        font-size: 18px;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
-/* Sections */
-section {
-    height: 100vh;
-    padding: 80px 20px 20px 20px;
-}
-.logo a {
-  display: inline-block;
-}
-
-.logo img {
-  cursor: pointer; /* pointer দেখাবে hover করলে */
+  .menu.active {
+    display: flex;
+  }
 }
